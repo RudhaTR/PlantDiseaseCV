@@ -47,7 +47,7 @@ body {
 .image-placeholder {
     background-color: #ddd;
     color: #555;
-    height: 100px;
+    height: 200px;
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ body {
 .image-placeholder img {
     width: 100%; /* Make image width 100% of the container */
     height: 100%; /* Make image height 100% of the container */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    object-fit: fill; /* Maintain aspect ratio and cover the area */
 }
 
 /* Submit button styling */
