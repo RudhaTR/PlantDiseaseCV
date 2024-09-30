@@ -12,7 +12,7 @@
     <div class="form-container">
         <h1>Provide The Following Details</h1>
 
-        <form>
+        <form onsubmit="handleFormSubmit(event)">
             <!-- Location Field -->
             <div class="form-group">
                 <label for="location">Location:</label>
@@ -39,8 +39,21 @@
 
             <!-- Submit Button -->
             <button type="submit">Submit</button>
+            
         </form>
     </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Optionally, you can collect form data here and process it as needed
+            
+            // Redirect to the results page
+            window.location.href = './result.html'; // Change this to your results page path
+        }
+    </script>
+    
 
 </body>
 </html>
