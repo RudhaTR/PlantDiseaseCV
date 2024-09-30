@@ -1,0 +1,78 @@
+/* Global body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/farmerbg2.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    color: white;
+    text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Placeholder for location image */
+.image-placeholder {
+    background-color: #ddd;
+    color: #555;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.image-placeholder img {
+    width: 100%; /* Make image width 100% of the container */
+    height: 100%; /* Make image height 100% of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* Submit button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
