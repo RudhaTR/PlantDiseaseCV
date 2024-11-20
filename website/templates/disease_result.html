@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/disease.css">
+    <title>Krishimitra - Disease Result</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../static/images/logo.jpeg" alt="Krishimitra Logo" class="logo">
+            <h2>Krishimitra</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cropRecommendation">Crop Recommendation</a></li>
+                <li><a href="/disease">Disease Recognition</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Prediction Results</h1>
+            <div class="result">
+                <!-- The uploaded image -->
+                <img src="{{ image_url }}" alt="Uploaded Image" class="result-image">
+
+                <!-- Predicted class -->
+                <h2 class="prediction">{{ predicted_class }}</h2>
+                <!-- <h3 class="confidence">Confidence: {{ confidence }}%</h3> -->
+            </div>
+            <button class="btn">
+                <a href="/disease">Try Another Image</a>
+            </button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Krishimitra. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

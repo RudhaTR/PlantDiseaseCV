@@ -106,11 +106,18 @@ def predict():
         predicted_class = class_labels[predicted_class_index]
         confidence = np.max(predictions)
 
-        # Return result
-        return jsonify({
-            "predicted_class": predicted_class,
-            "confidence": f"{confidence:.2f}"
-        })
+        # # Return result
+        # return jsonify({
+        #     "predicted_class": predicted_class,
+        #     "confidence": f"{confidence:.2f}"
+        # })
+
+        return render_template(
+            "disease_result.html",
+            image_url=f"/static/uploads/{file.filename}",
+            predicted_class=predicted_class
+            #,confidence=f"{confidence:.2f}"
+        )
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
