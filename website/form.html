@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Krishimitra</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Krishimitra Logo" class="logo">
+            <h2>Krishimitra</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Crop Recommendation</a></li>
+                <li><a href="index.html">Disease Recognition</a></li>
+                <li><a href="index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2 class="text-center">Provide The Following Details</h2>
+
+            <form id="detailsForm" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <div class="image-placeholder">
+                        <img src="./images/location img.jpg" alt="Dummy Location" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Area (in acres):</label>
+                    <input type="number" class="form-control" id="area" name="area" placeholder="Enter area in acres" step="0.1" min="0" required>
+                    <div class="invalid-feedback">Please provide a valid area (must be greater than or equal to 0).</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget:</label>
+                    <input name="budget" type="text" class="form-control" id="budget" placeholder="₹ 25000" required pattern="^\d+$">
+                    <div class="invalid-feedback">Please provide a valid budget (only numbers are allowed).</div>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Krishimitra. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Bootstrap validation script
+        (function () {
+            'use strict';
+            var form = document.getElementById('detailsForm');
+
+            form.addEventListener('submit', function (event) {
+                // Check if the form is valid
+                if (!form.checkValidity()) {
+                    event.preventDefault(); // Prevent form submission
+                    event.stopPropagation(); // Stop further propagation
+                } else {
+                    // Handle the successful form submission
+                    handleFormSubmit(event);
+                }
+                form.classList.add('was-validated'); // Add validation feedback class
+            }, false);
+        })();
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); 
+            // Redirect to the results page
+            window.location.href = './result.html';
+        }
+    </script>
+</body>
+</html>
