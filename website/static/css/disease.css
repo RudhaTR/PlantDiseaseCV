@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML take full height to enable flex layout */
+html, body {
+    height: 100%;
+}
+
+/* Add background image to body */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/farmerbg.jpg'); /* Path to the background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+}
+
+/* Flexbox layout for body, with header and footer pinned, and main filling space */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles with height set to 13% of the viewport */
+header {
+    background-color: #1c631f; /* Updated to new green background */
+    height: 13vh; /* Set header height to 13% of the viewport height */
+    color: white; /* White text */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center vertically */
+    padding: 0 20px; /* Add padding for the header */
+    justify-content: space-between; /* Space between logo/title and navigation */
+}
+
+/* Logo and title container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between logo/title and nav */
+}
+
+/* Logo styles */
+.logo {
+    height: 50px; /* Set the height of the logo */
+    width: 50px; /* Set the width of the logo to the same value as height */
+    border-radius: 50%; /* Make the logo round */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Title styling in header */
+header h2 {
+    font-size: 24px; /* Adjust font size to fit inside 13% height */
+    font-weight: 600;
+    margin: 0; /* Remove margin to bring it closer to the logo */
+    padding-left: 5px; /* Add slight padding for spacing */
+}
+
+/* Navigation styles */
+header nav {
+    /* No need for flex-grow since we use justify-content: space-between */
+}
+
+header nav ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Space between nav items */
+    margin: 0; /* Remove default margin */
+    justify-content: flex-end; /* Align nav items to the right */
+}
+
+header nav ul li a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size for nav links */
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    border-radius: 5px; /* Rounded corners for links on hover */
+}
+
+/* Main content container */
+main {
+    flex: 1; /* Fills available space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgba(245, 245, 245, 0.8); /* Light background color for main content with transparency */
+    padding: 20px; /* Add padding to main */
+}
+
+/* Container inside the main content */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Button styles */
+button.btn {
+    background-color: #4CAF50; /* Green background for the button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button.btn:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+/* Button link styling */
+button.btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Footer styles with height set to 13% of the viewport */
+footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    height: 10vh; /* Set footer height to 13% of the viewport height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-evenly; /* Space between copyright and links */
+    align-items: center; /* Center content vertically */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px; /* Footer text font size */
+}
+
+/* Footer navigation links */
+footer ul {
+    list-style-type: none;
+    display: flex; /* Use flex to align items in a row */
+    gap: 30px; /* Space between footer links */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+footer ul li a {
+    color: white; /* White text */
+    text-decoration: none;
+    font-size: 16px; /* Footer link font size */
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ddd; /* Light gray on hover */
+}
+
+/* Style for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between form elements */
+}
+
+/* Label styling */
+.upload-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* File input styling */
+input[type="file"] {
+    border: 2px solid black; /* Green border */
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #388E3C; /* Darker green on hover */
+}
+
+/* Align the submit button with the rest of the theme */
+button[type="submit"] {
+    background-color: #4CAF50; /* Same green as other buttons */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
