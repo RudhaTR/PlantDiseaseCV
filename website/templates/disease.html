@@ -25,7 +25,7 @@
         <div class="container">
             <h1>Disease Detection</h1>
             <p>Upload an image of your crop to detect diseases:</p>
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="/predict" method="POST" enctype="multipart/form-data">
                 <label for="diseaseImage" class="upload-label">Choose Image:</label>
                 <input type="file" id="diseaseImage" name="diseaseImage" accept="image/*">
                 <br>
@@ -42,10 +42,32 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </footer>
+    
     <script>
-        function chatFunction() {
-            alert("Chat feature coming soon!");
+    document.querySelector("form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+    
+        try {
+            const response = await fetch("/predict", {
+                method: "POST",
+                body: formData,
+            });
+    
+            const responseData = await response.json(); // Parse the response as JSON
+    
+            if (response.ok) {
+                alert(`Prediction: ${responseData.predicted_class}\nConfidence: ${responseData.confidence}`);
+            } else {
+                alert(`Error: ${responseData.error}`);
+            }
+        } catch (err) {
+            console.error("Error:", err);
+            alert("An error occurred while predicting.");
         }
-    </script>
+    });
+ </script>    
+    
+    
 </body>
 </html>
