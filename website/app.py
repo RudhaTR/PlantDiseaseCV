@@ -101,8 +101,10 @@ def predict():
 
         # Predict
         predictions = model.predict(img_array)
-        predicted_class = class_labels[np.argmax(predictions[0])]
-        confidence = np.max(predictions[0])
+        predicted_class_index = np.argmax(predictions, axis=-1)[0]
+        #predicted_class = class_labels[np.argmax(predictions[0])]
+        predicted_class = class_labels[predicted_class_index]
+        confidence = np.max(predictions)
 
         # Return result
         return jsonify({
